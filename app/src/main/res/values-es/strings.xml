@@ -20,7 +20,6 @@
     <string name="legend_predicted">Regla prevista</string>
     <string name="legend_fertile">Ventana fértil</string>
     <string name="legend_ovulation">Ovulación (previsión)</string>
-    <string name="legend_note">Un punto en la casilla indica que hay un registro del día. Las previsiones son aproximadas.</string>
 
     <string name="btn_started_today">La regla empezó hoy</string>
     <string name="btn_ended_today">La regla terminó hoy</string>
@@ -43,7 +42,7 @@
     <string name="sym_headache">Dolor de cabeza</string>
     <string name="sym_bloating">Hinchazón</string>
     <string name="sym_fatigue">Cansancio</string>
-    <string name="sym_mood">Mal humor</string>
+    <string name="sym_mood">Triste</string>
 
     <string name="set_defaults_title">Valores por defecto</string>
     <string name="set_defaults_hint">Se usan hasta que haya datos suficientes para calcular.</string>
@@ -95,4 +94,16 @@
     <string name="greet_morning">Buenos días</string>
     <string name="greet_day">Buenas tardes</string>
     <string name="greet_evening">Buenas noches</string>
+    <string name="mood_title">Estado de ánimo</string>
+    <string name="mood_good">Bueno</string>
+    <string name="mood_angry">Irritación</string>
+    <string name="extra_sex">Sexo</string>
+    <string name="extra_pill">Píldora</string>
+    <string name="extra_sweet">Antojo de dulce</string>
+    <string name="btn_log_day">Registrar día</string>
+    <string name="set_profile_title">Perfil</string>
+    <string name="set_profile_save">Guardar perfil</string>
+    <string name="phase_fertile">Hoy: ventana fértil</string>
+    <string name="phase_period">Tienes la regla</string>
+    <string name="cd_avatar">Avatar</string>
 </resources>

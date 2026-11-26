@@ -20,7 +20,6 @@
     <string name="legend_predicted">Predicted period</string>
     <string name="legend_fertile">Fertile window</string>
     <string name="legend_ovulation">Ovulation (predicted)</string>
-    <string name="legend_note">A dot in a cell means the day has a log entry. Predictions are approximate.</string>
 
     <string name="btn_started_today">Period started today</string>
     <string name="btn_ended_today">Period ended today</string>
@@ -43,7 +42,7 @@
     <string name="sym_headache">Headache</string>
     <string name="sym_bloating">Bloating</string>
     <string name="sym_fatigue">Fatigue</string>
-    <string name="sym_mood">Low mood</string>
+    <string name="sym_mood">Sad</string>
 
     <string name="set_defaults_title">Default values</string>
     <string name="set_defaults_hint">Used until there is enough data to calculate.</string>
@@ -95,4 +94,16 @@
     <string name="greet_morning">Good morning</string>
     <string name="greet_day">Good afternoon</string>
     <string name="greet_evening">Good evening</string>
+    <string name="mood_title">Mood</string>
+    <string name="mood_good">Good</string>
+    <string name="mood_angry">Irritation</string>
+    <string name="extra_sex">Sex</string>
+    <string name="extra_pill">Pill</string>
+    <string name="extra_sweet">Sweet cravings</string>
+    <string name="btn_log_day">Log day</string>
+    <string name="set_profile_title">Profile</string>
+    <string name="set_profile_save">Save profile</string>
+    <string name="phase_fertile">Fertile window today</string>
+    <string name="phase_period">Period in progress</string>
+    <string name="cd_avatar">Avatar</string>
 </resources>

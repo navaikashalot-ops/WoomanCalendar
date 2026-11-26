@@ -20,7 +20,6 @@
     <string name="legend_predicted">Prognostizierte Periode</string>
     <string name="legend_fertile">Fruchtbares Fenster</string>
     <string name="legend_ovulation">Eisprung (Prognose)</string>
-    <string name="legend_note">Ein Punkt im Feld bedeutet: Für den Tag gibt es einen Eintrag. Prognosen sind ungefähr.</string>
 
     <string name="btn_started_today">Periode heute begonnen</string>
     <string name="btn_ended_today">Periode heute beendet</string>
@@ -43,7 +42,7 @@
     <string name="sym_headache">Kopfschmerzen</string>
     <string name="sym_bloating">Blähungen</string>
     <string name="sym_fatigue">Müdigkeit</string>
-    <string name="sym_mood">Schlechte Stimmung</string>
+    <string name="sym_mood">Traurig</string>
 
     <string name="set_defaults_title">Standardwerte</string>
     <string name="set_defaults_hint">Werden verwendet, bis genug Daten für eine Berechnung vorliegen.</string>
@@ -95,4 +94,16 @@
     <string name="greet_morning">Guten Morgen</string>
     <string name="greet_day">Guten Tag</string>
     <string name="greet_evening">Guten Abend</string>
+    <string name="mood_title">Stimmung</string>
+    <string name="mood_good">Gut</string>
+    <string name="mood_angry">Gereiztheit</string>
+    <string name="extra_sex">Sex</string>
+    <string name="extra_pill">Pille</string>
+    <string name="extra_sweet">Lust auf Süßes</string>
+    <string name="btn_log_day">Tag eintragen</string>
+    <string name="set_profile_title">Profil</string>
+    <string name="set_profile_save">Profil speichern</string>
+    <string name="phase_fertile">Heute fruchtbares Fenster</string>
+    <string name="phase_period">Periode läuft</string>
+    <string name="cd_avatar">Avatar</string>
 </resources>

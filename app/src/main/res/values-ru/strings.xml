@@ -20,7 +20,6 @@
     <string name="legend_predicted">Прогноз месячных</string>
     <string name="legend_fertile">Фертильное окно</string>
     <string name="legend_ovulation">Овуляция (прогноз)</string>
-    <string name="legend_note">Точка в клетке — есть запись дня. Прогноз ориентировочный.</string>
 
     <string name="btn_started_today">Начались сегодня</string>
     <string name="btn_ended_today">Закончились сегодня</string>
@@ -43,7 +42,7 @@
     <string name="sym_headache">Головная боль</string>
     <string name="sym_bloating">Вздутие</string>
     <string name="sym_fatigue">Усталость</string>
-    <string name="sym_mood">Плохое настроение</string>
+    <string name="sym_mood">Грусть</string>
 
     <string name="set_defaults_title">Параметры по умолчанию</string>
     <string name="set_defaults_hint">Используются, пока мало данных для расчёта.</string>
@@ -95,4 +94,16 @@
     <string name="greet_morning">Доброе утро</string>
     <string name="greet_day">Добрый день</string>
     <string name="greet_evening">Добрый вечер</string>
+    <string name="mood_title">Настроение</string>
+    <string name="mood_good">Хорошее</string>
+    <string name="mood_angry">Раздражение</string>
+    <string name="extra_sex">Секс</string>
+    <string name="extra_pill">Таблетка</string>
+    <string name="extra_sweet">Тяга к сладкому</string>
+    <string name="btn_log_day">Записать день</string>
+    <string name="set_profile_title">Профиль</string>
+    <string name="set_profile_save">Сохранить профиль</string>
+    <string name="phase_fertile">Сегодня фертильное окно</string>
+    <string name="phase_period">Идут месячные</string>
+    <string name="cd_avatar">Аватарка</string>
 </resources>
