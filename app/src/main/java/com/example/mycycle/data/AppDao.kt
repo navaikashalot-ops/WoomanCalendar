@@ -71,4 +71,13 @@ abstract class AppDao {
         upsertLogs(logs)
         upsertSettings(settings.copy(id = 1))
     }
+
+    @Transaction
+    open suspend fun completeOnboarding(cycle: Cycle?, settings: Settings?, profile: Profile) {
+        if (cycle != null && getCycles().none { it.startDate == cycle.startDate }) {
+            upsertCycle(cycle)
+        }
+        if (settings != null) upsertSettings(settings)
+        upsertProfile(profile)
+    }
 }

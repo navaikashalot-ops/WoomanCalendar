@@ -83,10 +83,10 @@ class AppRepository(
         cycleLength: Int,
         periodLength: Int,
     ) {
-        if (lastStart != null) {
-            startPeriod(lastStart)
-            saveSettings(cycleLength, periodLength)
-        }
-        saveProfile(name, avatar)
+        val now = System.currentTimeMillis()
+        val cycle = lastStart?.let { Cycle(UUID.randomUUID().toString(), it.toString(), null, now) }
+        val settings = if (lastStart != null) Settings(1, cycleLength, periodLength, now) else null
+        dao.completeOnboarding(cycle, settings, Profile(1, name, avatar, true, now))
+        requestBackup()
     }
 }

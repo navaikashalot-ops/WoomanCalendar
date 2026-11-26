@@ -67,6 +67,7 @@ fun OnboardingScreen(
     var avatar by rememberSaveable { mutableStateOf(AVATAR_KEYS.first()) }
     var cycleLen by rememberSaveable { mutableIntStateOf(DEFAULT_CYCLE) }
     var periodLen by rememberSaveable { mutableIntStateOf(DEFAULT_PERIOD) }
+    var submitted by rememberSaveable { mutableStateOf(false) }
     val totalSteps = if (mode == OnboardingMode.FULL) 2 else 1
 
     Column(
@@ -84,9 +85,14 @@ fun OnboardingScreen(
                 onName = { name = it },
                 avatar = avatar,
                 onAvatar = { avatar = it },
+                enabled = !submitted,
                 onNext = {
-                    if (mode == OnboardingMode.FULL) step = 1
-                    else onDone(name, avatar, null, DEFAULT_CYCLE, DEFAULT_PERIOD)
+                    if (mode == OnboardingMode.FULL) {
+                        step = 1
+                    } else {
+                        submitted = true
+                        onDone(name, avatar, null, DEFAULT_CYCLE, DEFAULT_PERIOD)
+                    }
                 },
             )
         } else {
@@ -95,8 +101,15 @@ fun OnboardingScreen(
                 onCycleLen = { cycleLen = it },
                 periodLen = periodLen,
                 onPeriodLen = { periodLen = it },
-                onSkip = { onDone(name, avatar, null, cycleLen, periodLen) },
-                onDone = { date -> onDone(name, avatar, date, cycleLen, periodLen) },
+                enabled = !submitted,
+                onSkip = {
+                    submitted = true
+                    onDone(name, avatar, null, cycleLen, periodLen)
+                },
+                onDone = { date ->
+                    submitted = true
+                    onDone(name, avatar, date, cycleLen, periodLen)
+                },
             )
         }
     }
@@ -135,6 +148,7 @@ private fun ProfileStep(
     onName: (String) -> Unit,
     avatar: String,
     onAvatar: (String) -> Unit,
+    enabled: Boolean,
     onNext: () -> Unit,
 ) {
     Header(stringResource(R.string.ob_hello_title), stringResource(R.string.ob_hello_sub))
@@ -151,6 +165,7 @@ private fun ProfileStep(
     Spacer(Modifier.height(24.dp))
     Button(
         onClick = onNext,
+        enabled = enabled,
         shape = PeonyShapes.Button,
         modifier = Modifier.fillMaxWidth().height(52.dp),
     ) { Text(stringResource(R.string.ob_next), fontWeight = FontWeight.Bold) }
@@ -172,6 +187,7 @@ private fun CycleStep(
     onCycleLen: (Int) -> Unit,
     periodLen: Int,
     onPeriodLen: (Int) -> Unit,
+    enabled: Boolean,
     onSkip: () -> Unit,
     onDone: (LocalDate) -> Unit,
 ) {
@@ -215,13 +231,14 @@ private fun CycleStep(
     Row(horizontalArrangement = Arrangement.spacedBy(12.dp), modifier = Modifier.fillMaxWidth()) {
         OutlinedButton(
             onClick = onSkip,
+            enabled = enabled,
             shape = PeonyShapes.Button,
             modifier = Modifier.weight(1f).height(52.dp),
         ) { Text(stringResource(R.string.ob_dont_remember)) }
         val selected = pickerState.selectedDateMillis
         Button(
             onClick = { if (selected != null) onDone(millisToDate(selected)) },
-            enabled = selected != null,
+            enabled = enabled && selected != null,
             shape = PeonyShapes.Button,
             modifier = Modifier.weight(1f).height(52.dp),
         ) { Text(stringResource(R.string.ob_done), fontWeight = FontWeight.Bold) }
