@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Zykluskalender</string>
+
+    <string name="nav_calendar">Kalender</string>
+    <string name="nav_settings">Einstellungen</string>
+
+    <string name="cycle_day">Zyklustag: %1$d</string>
+    <string name="next_period">Nächste Periode: %1$s (%2$s)</string>
+    <string name="when_today">heute</string>
+    <string name="when_tomorrow">morgen</string>
+    <string name="when_in_days">in %1$d Tg.</string>
+    <string name="expected_late">Erwartet am %1$s — %2$d Tg. verspätet</string>
+    <string name="avg_summary">Durchschnittlicher Zyklus: %1$d Tg., Periode: %2$d Tg.</string>
+    <string name="hint_first">Markiere den ersten Tag deiner Periode — dann erscheint die Prognose.</string>
+    <string name="empty_banner">Noch keine Daten. Falls du die App neu installiert hast, stelle die Daten aus der Sicherungsdatei wieder her.</string>
+    <string name="open_backup_settings">Sicherungseinstellungen öffnen</string>
+
+    <string name="legend_period">Periode</string>
+    <string name="legend_predicted">Prognostizierte Periode</string>
+    <string name="legend_fertile">Fruchtbares Fenster</string>
+    <string name="legend_ovulation">Eisprung (Prognose)</string>
+    <string name="legend_note">Ein Punkt im Feld bedeutet: Für den Tag gibt es einen Eintrag. Prognosen sind ungefähr.</string>
+
+    <string name="btn_started_today">Periode heute begonnen</string>
+    <string name="btn_ended_today">Periode heute beendet</string>
+
+    <string name="dlg_start">Beginn</string>
+    <string name="dlg_end">Ende</string>
+    <string name="dlg_delete_cycle">An diesem Tag begonnenen Zyklus löschen</string>
+    <string name="dlg_flow">Stärke</string>
+    <string name="dlg_symptoms">Symptome</string>
+    <string name="dlg_note">Notiz</string>
+    <string name="dlg_save">Speichern</string>
+    <string name="dlg_close">Schließen</string>
+
+    <string name="flow_none">—</string>
+    <string name="flow_light">Leicht</string>
+    <string name="flow_medium">Mittel</string>
+    <string name="flow_heavy">Stark</string>
+
+    <string name="sym_cramps">Unterleibsschmerzen</string>
+    <string name="sym_headache">Kopfschmerzen</string>
+    <string name="sym_bloating">Blähungen</string>
+    <string name="sym_fatigue">Müdigkeit</string>
+    <string name="sym_mood">Schlechte Stimmung</string>
+
+    <string name="set_defaults_title">Standardwerte</string>
+    <string name="set_defaults_hint">Werden verwendet, bis genug Daten für eine Berechnung vorliegen.</string>
+    <string name="set_cycle_len">Zykluslänge, Tg.</string>
+    <string name="set_period_len">Periodendauer, Tg.</string>
+    <string name="set_save">Werte speichern</string>
+
+    <string name="bk_title">Sicherung in Google Drive</string>
+    <string name="bk_desc">Die Daten liegen auf deinem Handy und werden in eine JSON-Datei auf deinem Google Drive gespiegelt. Die Datei wird einmal gewählt und nach jeder Änderung automatisch aktualisiert.</string>
+    <string name="bk_file">Sicherungsdatei: %1$s</string>
+    <string name="bk_file_none">nicht gewählt</string>
+    <string name="bk_file_generic">Datei</string>
+    <string name="bk_last">Letzte Sicherung: %1$s</string>
+    <string name="bk_error">Fehler: %1$s</string>
+    <string name="bk_create">Sicherungsdatei erstellen (Drive wählen)</string>
+    <string name="bk_now">Jetzt sichern</string>
+    <string name="bk_restore">Aus Datei wiederherstellen</string>
+    <string name="bk_restore_hint">Nach Neuinstallation oder auf einem neuen Handy: „Aus Datei wiederherstellen“ und cycle-backup.json auf Drive wählen.</string>
+
+    <string name="restore_confirm_title">Aktuelle Daten ersetzen?</string>
+    <string name="restore_confirm_text">Alle Daten auf diesem Handy werden durch den Inhalt der Datei ersetzt.</string>
+    <string name="replace">Ersetzen</string>
+    <string name="cancel">Abbrechen</string>
+
+    <string name="toast_start_marked">Periodenbeginn markiert</string>
+    <string name="toast_end_marked">Periodenende markiert</string>
+    <string name="toast_need_start">Markiere zuerst den Periodenbeginn</string>
+    <string name="toast_cycle_deleted">Zyklus gelöscht</string>
+    <string name="toast_file_selected">Sicherungsdatei gewählt</string>
+    <string name="toast_backup_saved">Sicherung gespeichert</string>
+    <string name="toast_backup_error">Sicherungsfehler</string>
+
+    <string name="err_local">lokal: %1$s</string>
+    <string name="err_drive">Google Drive: %1$s</string>
+    <string name="err_file_unavailable">Datei nicht verfügbar</string>
+    <string name="restore_open_fail">Datei konnte nicht geöffnet werden</string>
+    <string name="restore_too_new">Die Datei stammt von einer neueren App-Version</string>
+    <string name="restore_ok">Wiederhergestellt: %1$d Zyklen, %2$d Einträge</string>
+    <string name="restore_fail">Datei konnte nicht gelesen werden: %1$s</string>
+</resources>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Календарь цикла</string>
+
+    <string name="nav_calendar">Календарь</string>
+    <string name="nav_settings">Настройки</string>
+
+    <string name="cycle_day">День цикла: %1$d</string>
+    <string name="next_period">Следующие месячные: %1$s (%2$s)</string>
+    <string name="when_today">сегодня</string>
+    <string name="when_tomorrow">завтра</string>
+    <string name="when_in_days">через %1$d дн.</string>
+    <string name="expected_late">Ожидались %1$s — задержка %2$d дн.</string>
+    <string name="avg_summary">Средний цикл: %1$d дн., месячные: %2$d дн.</string>
+    <string name="hint_first">Отметьте первый день месячных — после этого появится прогноз.</string>
+    <string name="empty_banner">Данных пока нет. Если вы переустанавливали приложение — восстановите их из файла копии.</string>
+    <string name="open_backup_settings">Открыть настройки копий</string>
+
+    <string name="legend_period">Месячные</string>
+    <string name="legend_predicted">Прогноз месячных</string>
+    <string name="legend_fertile">Фертильное окно</string>
+    <string name="legend_ovulation">Овуляция (прогноз)</string>
+    <string name="legend_note">Точка в клетке — есть запись дня. Прогноз ориентировочный.</string>
+
+    <string name="btn_started_today">Начались сегодня</string>
+    <string name="btn_ended_today">Закончились сегодня</string>
+
+    <string name="dlg_start">Начало</string>
+    <string name="dlg_end">Конец</string>
+    <string name="dlg_delete_cycle">Удалить цикл, начатый в этот день</string>
+    <string name="dlg_flow">Интенсивность</string>
+    <string name="dlg_symptoms">Симптомы</string>
+    <string name="dlg_note">Заметка</string>
+    <string name="dlg_save">Сохранить</string>
+    <string name="dlg_close">Закрыть</string>
+
+    <string name="flow_none">—</string>
+    <string name="flow_light">Слабо</string>
+    <string name="flow_medium">Средне</string>
+    <string name="flow_heavy">Сильно</string>
+
+    <string name="sym_cramps">Боль внизу живота</string>
+    <string name="sym_headache">Головная боль</string>
+    <string name="sym_bloating">Вздутие</string>
+    <string name="sym_fatigue">Усталость</string>
+    <string name="sym_mood">Плохое настроение</string>
+
+    <string name="set_defaults_title">Параметры по умолчанию</string>
+    <string name="set_defaults_hint">Используются, пока мало данных для расчёта.</string>
+    <string name="set_cycle_len">Длина цикла, дн.</string>
+    <string name="set_period_len">Длина месячных, дн.</string>
+    <string name="set_save">Сохранить параметры</string>
+
+    <string name="bk_title">Резервная копия в Google Drive</string>
+    <string name="bk_desc">Данные хранятся на телефоне и дублируются в JSON-файл на вашем Google Drive. Файл выбирается один раз; после каждого изменения он обновляется сам.</string>
+    <string name="bk_file">Файл копии: %1$s</string>
+    <string name="bk_file_none">не выбран</string>
+    <string name="bk_file_generic">файл</string>
+    <string name="bk_last">Последняя копия: %1$s</string>
+    <string name="bk_error">Ошибка: %1$s</string>
+    <string name="bk_create">Создать файл копии (выбрать Drive)</string>
+    <string name="bk_now">Сохранить копию сейчас</string>
+    <string name="bk_restore">Восстановить из файла</string>
+    <string name="bk_restore_hint">После переустановки или на новом телефоне: «Восстановить из файла» и выберите cycle-backup.json на Drive.</string>
+
+    <string name="restore_confirm_title">Заменить текущие данные?</string>
+    <string name="restore_confirm_text">Все данные на телефоне будут заменены содержимым файла.</string>
+    <string name="replace">Заменить</string>
+    <string name="cancel">Отмена</string>
+
+    <string name="toast_start_marked">Начало месячных отмечено</string>
+    <string name="toast_end_marked">Конец месячных отмечен</string>
+    <string name="toast_need_start">Сначала отметьте начало месячных</string>
+    <string name="toast_cycle_deleted">Цикл удалён</string>
+    <string name="toast_file_selected">Файл копии выбран</string>
+    <string name="toast_backup_saved">Копия сохранена</string>
+    <string name="toast_backup_error">Ошибка копии</string>
+
+    <string name="err_local">локально: %1$s</string>
+    <string name="err_drive">Google Drive: %1$s</string>
+    <string name="err_file_unavailable">файл недоступен</string>
+    <string name="restore_open_fail">Не удалось открыть файл</string>
+    <string name="restore_too_new">Файл создан более новой версией приложения</string>
+    <string name="restore_ok">Восстановлено: циклов %1$d, записей %2$d</string>
+    <string name="restore_fail">Не удалось прочитать файл: %1$s</string>
+</resources>

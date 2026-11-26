@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Calendario menstrual</string>
+
+    <string name="nav_calendar">Calendario</string>
+    <string name="nav_settings">Ajustes</string>
+
+    <string name="cycle_day">Día del ciclo: %1$d</string>
+    <string name="next_period">Próxima regla: %1$s (%2$s)</string>
+    <string name="when_today">hoy</string>
+    <string name="when_tomorrow">mañana</string>
+    <string name="when_in_days">en %1$d d.</string>
+    <string name="expected_late">Prevista el %1$s — %2$d d. de retraso</string>
+    <string name="avg_summary">Ciclo medio: %1$d d., regla: %2$d d.</string>
+    <string name="hint_first">Marca el primer día de tu regla y aparecerá la previsión.</string>
+    <string name="empty_banner">Aún no hay datos. Si reinstalaste la app, restaura tus datos desde el archivo de copia.</string>
+    <string name="open_backup_settings">Abrir ajustes de copia</string>
+
+    <string name="legend_period">Regla</string>
+    <string name="legend_predicted">Regla prevista</string>
+    <string name="legend_fertile">Ventana fértil</string>
+    <string name="legend_ovulation">Ovulación (previsión)</string>
+    <string name="legend_note">Un punto en la casilla indica que hay un registro del día. Las previsiones son aproximadas.</string>
+
+    <string name="btn_started_today">La regla empezó hoy</string>
+    <string name="btn_ended_today">La regla terminó hoy</string>
+
+    <string name="dlg_start">Inicio</string>
+    <string name="dlg_end">Fin</string>
+    <string name="dlg_delete_cycle">Eliminar el ciclo iniciado este día</string>
+    <string name="dlg_flow">Flujo</string>
+    <string name="dlg_symptoms">Síntomas</string>
+    <string name="dlg_note">Nota</string>
+    <string name="dlg_save">Guardar</string>
+    <string name="dlg_close">Cerrar</string>
+
+    <string name="flow_none">—</string>
+    <string name="flow_light">Escaso</string>
+    <string name="flow_medium">Medio</string>
+    <string name="flow_heavy">Abundante</string>
+
+    <string name="sym_cramps">Dolor abdominal</string>
+    <string name="sym_headache">Dolor de cabeza</string>
+    <string name="sym_bloating">Hinchazón</string>
+    <string name="sym_fatigue">Cansancio</string>
+    <string name="sym_mood">Mal humor</string>
+
+    <string name="set_defaults_title">Valores por defecto</string>
+    <string name="set_defaults_hint">Se usan hasta que haya datos suficientes para calcular.</string>
+    <string name="set_cycle_len">Duración del ciclo, d.</string>
+    <string name="set_period_len">Duración de la regla, d.</string>
+    <string name="set_save">Guardar valores</string>
+
+    <string name="bk_title">Copia en Google Drive</string>
+    <string name="bk_desc">Los datos se guardan en tu teléfono y se duplican en un archivo JSON de tu Google Drive. Eliges el archivo una vez y se actualiza solo tras cada cambio.</string>
+    <string name="bk_file">Archivo de copia: %1$s</string>
+    <string name="bk_file_none">no seleccionado</string>
+    <string name="bk_file_generic">archivo</string>
+    <string name="bk_last">Última copia: %1$s</string>
+    <string name="bk_error">Error: %1$s</string>
+    <string name="bk_create">Crear archivo de copia (elegir Drive)</string>
+    <string name="bk_now">Hacer copia ahora</string>
+    <string name="bk_restore">Restaurar desde archivo</string>
+    <string name="bk_restore_hint">Tras reinstalar o en un teléfono nuevo: «Restaurar desde archivo» y elige cycle-backup.json en Drive.</string>
+
+    <string name="restore_confirm_title">¿Reemplazar los datos actuales?</string>
+    <string name="restore_confirm_text">Todos los datos del teléfono se reemplazarán por el contenido del archivo.</string>
+    <string name="replace">Reemplazar</string>
+    <string name="cancel">Cancelar</string>
+
+    <string name="toast_start_marked">Inicio de la regla marcado</string>
+    <string name="toast_end_marked">Fin de la regla marcado</string>
+    <string name="toast_need_start">Primero marca el inicio de la regla</string>
+    <string name="toast_cycle_deleted">Ciclo eliminado</string>
+    <string name="toast_file_selected">Archivo de copia seleccionado</string>
+    <string name="toast_backup_saved">Copia guardada</string>
+    <string name="toast_backup_error">Error de copia</string>
+
+    <string name="err_local">local: %1$s</string>
+    <string name="err_drive">Google Drive: %1$s</string>
+    <string name="err_file_unavailable">archivo no disponible</string>
+    <string name="restore_open_fail">No se pudo abrir el archivo</string>
+    <string name="restore_too_new">El archivo fue creado por una versión más reciente de la app</string>
+    <string name="restore_ok">Restaurado: %1$d ciclos, %2$d registros</string>
+    <string name="restore_fail">No se pudo leer el archivo: %1$s</string>
+</resources>
