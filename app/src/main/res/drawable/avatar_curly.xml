@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Converted from docs/superpowers/specs/assets/peony-mockup.html #a-curly -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="64dp"
+    android:height="64dp"
+    android:viewportWidth="64"
+    android:viewportHeight="64">
+    <path
+        android:pathData="M0,32 a32,32 0 1,0 64,0 a32,32 0 1,0 -64,0 Z"
+        android:fillColor="#FFE9D9" />
+    <path
+        android:pathData="M14,27 a6,6 0 1,0 12,0 a6,6 0 1,0 -12,0 Z"
+        android:fillColor="#3B2622" />
+    <path
+        android:pathData="M20,19 a6,6 0 1,0 12,0 a6,6 0 1,0 -12,0 Z"
+        android:fillColor="#3B2622" />
+    <path
+        android:pathData="M28,17 a6,6 0 1,0 12,0 a6,6 0 1,0 -12,0 Z"
+        android:fillColor="#3B2622" />
+    <path
+        android:pathData="M36,21 a6,6 0 1,0 12,0 a6,6 0 1,0 -12,0 Z"
+        android:fillColor="#3B2622" />
+    <path
+        android:pathData="M39,30 a6,6 0 1,0 12,0 a6,6 0 1,0 -12,0 Z"
+        android:fillColor="#3B2622" />
+    <path
+        android:pathData="M14,36 a5,5 0 1,0 10,0 a5,5 0 1,0 -10,0 Z"
+        android:fillColor="#3B2622" />
+    <path
+        android:pathData="M40,38 a5,5 0 1,0 10,0 a5,5 0 1,0 -10,0 Z"
+        android:fillColor="#3B2622" />
+    <path
+        android:pathData="M20.5,35 a11.5,11.5 0 1,0 23,0 a11.5,11.5 0 1,0 -23,0 Z"
+        android:fillColor="#B9785A" />
+    <path
+        android:pathData="M14 64c2-11 9-15 18-15s16 4 18 15z"
+        android:fillColor="#F6C7A8" />
+    <path
+        android:pathData="M26.1,35 a1.4,1.4 0 1,0 2.8,0 a1.4,1.4 0 1,0 -2.8,0 Z"
+        android:fillColor="#2A1A17" />
+    <path
+        android:pathData="M35.1,35 a1.4,1.4 0 1,0 2.8,0 a1.4,1.4 0 1,0 -2.8,0 Z"
+        android:fillColor="#2A1A17" />
+    <path
+        android:pathData="M29 40q3 2 6 0"
+        android:strokeColor="#7A2E3E"
+        android:strokeWidth="1.4"
+        android:strokeLineCap="round" />
+    <path
+        android:pathData="M22.5,39 a2,2 0 1,0 4,0 a2,2 0 1,0 -4,0 Z"
+        android:fillColor="#D9867F" />
+    <path
+        android:pathData="M37.5,39 a2,2 0 1,0 4,0 a2,2 0 1,0 -4,0 Z"
+        android:fillColor="#D9867F" />
+</vector>

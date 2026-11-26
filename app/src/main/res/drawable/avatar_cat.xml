@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Converted from docs/superpowers/specs/assets/peony-mockup.html #a-cat -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="64dp"
+    android:height="64dp"
+    android:viewportWidth="64"
+    android:viewportHeight="64">
+    <path
+        android:pathData="M0,32 a32,32 0 1,0 64,0 a32,32 0 1,0 -64,0 Z"
+        android:fillColor="#E4F3EA" />
+    <path
+        android:pathData="M15 22l4-10 9 7M49 22l-4-10-9 7"
+        android:fillColor="#F2B98B" />
+    <path
+        android:pathData="M14,35 a18,16 0 1,0 36,0 a18,16 0 1,0 -36,0 Z"
+        android:fillColor="#F2B98B" />
+    <path
+        android:pathData="M18 14.5l2.5 6M46 14.5l-2.5 6"
+        android:strokeColor="#F7A8B8"
+        android:strokeWidth="2.5"
+        android:strokeLineCap="round" />
+    <path
+        android:pathData="M23,33 a2,2 0 1,0 4,0 a2,2 0 1,0 -4,0 Z"
+        android:fillColor="#4A2C2A" />
+    <path
+        android:pathData="M37,33 a2,2 0 1,0 4,0 a2,2 0 1,0 -4,0 Z"
+        android:fillColor="#4A2C2A" />
+    <path
+        android:pathData="M30.5 38h3l-1.5 1.6z"
+        android:fillColor="#E25D7E" />
+    <path
+        android:pathData="M32 39.6q-2 2.6-4 1M32 39.6q2 2.6 4 1M14 37h7M14 41l7-1.5M50 37h-7M50 41l-7-1.5"
+        android:strokeColor="#9B6A4A"
+        android:strokeWidth="1.1"
+        android:strokeLineCap="round" />
+</vector>
