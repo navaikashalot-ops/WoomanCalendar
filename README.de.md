@@ -1,6 +1,6 @@
 # WoomanCalendar
 
-[English](README.md) · [Русский](README.ru.md) · [Українська](README.uk.md) · **Deutsch** · [Español](README.es.md)
+[English](README.md) · [Русский](README.ru.md) · **Deutsch** · [Español](README.es.md)
 
 Ein privater Perioden- und Zykluskalender für Android, der offline funktioniert. Markiere den ersten Tag deiner Periode — der Kalender prognostiziert die nächsten Perioden, das fruchtbare Fenster und den Eisprung. Kein Konto, keine Werbung, keine Analyse, keine Server: Deine Daten bleiben auf dem Handy und werden auf **dein eigenes Google Drive** gespiegelt.
 

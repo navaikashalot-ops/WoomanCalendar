@@ -1,6 +1,6 @@
 # WoomanCalendar
 
-[English](README.md) · [Русский](README.ru.md) · [Українська](README.uk.md) · [Deutsch](README.de.md) · **Español**
+[English](README.md) · [Русский](README.ru.md) · [Deutsch](README.de.md) · **Español**
 
 Calendario menstrual privado para Android que funciona sin conexión. Marca el primer día de tu regla y el calendario prevé las próximas reglas, la ventana fértil y la ovulación. Sin cuenta, sin anuncios, sin analítica y sin servidores: tus datos se quedan en el teléfono y se duplican en **tu propio Google Drive**.
 

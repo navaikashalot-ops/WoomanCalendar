@@ -1,6 +1,6 @@
 # WoomanCalendar
 
-**English** · [Русский](README.ru.md) · [Українська](README.uk.md) · [Deutsch](README.de.md) · [Español](README.es.md)
+**English** · [Русский](README.ru.md) · [Deutsch](README.de.md) · [Español](README.es.md)
 
 A private, offline-first period and cycle tracker for Android. Mark the first day of your period and the calendar predicts upcoming periods, the fertile window and ovulation. No account, no ads, no analytics, no servers — your data stays on your phone and is mirrored to **your own Google Drive**.
 
