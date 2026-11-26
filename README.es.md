@@ -13,7 +13,7 @@ Calendario menstrual privado para Android que funciona sin conexión. Marca el p
 - Previsión a partir de los últimos 6 ciclos (los recientes pesan más)
 - Los datos se conservan al actualizar la app (mismo nombre de paquete y misma clave de firma)
 - Copia JSON automática en un archivo de tu Google Drive, sin registro en Google Cloud ni inicio de sesión en la app
-- Idiomas: English, Русский, Українська, Deutsch, Español (según el idioma del sistema; idioma por app en Android 13+)
+- Idiomas: English, Русский, Deutsch, Español (según el idioma del sistema; idioma por app en Android 13+)
 
 ## Capturas de pantalla
 

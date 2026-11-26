@@ -13,7 +13,7 @@ Ein privater Perioden- und Zykluskalender für Android, der offline funktioniert
 - Prognose aus den letzten 6 Zyklen (neuere zählen stärker)
 - Daten bleiben bei App-Updates erhalten (gleicher Paketname + gleicher Signaturschlüssel)
 - Automatische JSON-Sicherung in eine Datei auf deinem Google Drive — ohne Google-Cloud-Registrierung und ohne Anmeldung in der App
-- Sprachen: English, Русский, Українська, Deutsch, Español (folgt der Systemsprache; App-Sprache ab Android 13)
+- Sprachen: English, Русский, Deutsch, Español (folgt der Systemsprache; App-Sprache ab Android 13)
 
 ## Screenshots
 

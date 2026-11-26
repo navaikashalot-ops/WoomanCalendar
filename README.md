@@ -13,7 +13,7 @@ A private, offline-first period and cycle tracker for Android. Mark the first da
 - Prediction from your last 6 cycles (recent cycles weigh more)
 - Data survives app updates (same package name + same signing key)
 - Automatic JSON backup to a file on your Google Drive — no Google Cloud registration, no sign-in inside the app
-- Languages: English, Русский, Українська, Deutsch, Español (follows system language; per-app language on Android 13+)
+- Languages: English, Русский, Deutsch, Español (follows system language; per-app language on Android 13+)
 
 ## Screenshots
 
