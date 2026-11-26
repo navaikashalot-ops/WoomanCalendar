@@ -2,7 +2,7 @@ name: Build APK
 
 on:
   push:
-    branches: [main]
+    branches: [main, "claude/**"]
   workflow_dispatch:
 
 permissions:
@@ -22,6 +22,9 @@ jobs:
       - uses: gradle/actions/setup-gradle@v3
         with:
           gradle-version: "8.7"
+
+      - name: Unit tests
+        run: gradle :app:testDebugUnitTest --no-daemon
 
       - name: Decode keystore
         env:
@@ -51,6 +54,7 @@ jobs:
           path: WoomanCalendar-${{ github.run_number }}.apk
 
       - name: Publish release (скачать APK прямо на телефон)
+        if: github.ref == 'refs/heads/main'
         uses: softprops/action-gh-release@v2
         with:
           tag_name: build-${{ github.run_number }}
