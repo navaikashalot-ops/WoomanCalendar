@@ -83,4 +83,16 @@
     <string name="restore_too_new">El archivo fue creado por una versión más reciente de la app</string>
     <string name="restore_ok">Restaurado: %1$d ciclos, %2$d registros</string>
     <string name="restore_fail">No se pudo leer el archivo: %1$s</string>
+    <string name="ob_hello_title">Vamos a conocernos</string>
+    <string name="ob_hello_sub">Tu nombre y avatar solo los ves tú</string>
+    <string name="ob_name">¿Cómo te llamamos?</string>
+    <string name="ob_next">Siguiente</string>
+    <string name="ob_cycle_title">Tu ciclo</string>
+    <string name="ob_cycle_sub">Puedes omitirlo y marcarlo después en el calendario</string>
+    <string name="ob_last_start">Primer día de tu última regla</string>
+    <string name="ob_dont_remember">No lo recuerdo</string>
+    <string name="ob_done">Listo</string>
+    <string name="greet_morning">Buenos días</string>
+    <string name="greet_day">Buenas tardes</string>
+    <string name="greet_evening">Buenas noches</string>
 </resources>

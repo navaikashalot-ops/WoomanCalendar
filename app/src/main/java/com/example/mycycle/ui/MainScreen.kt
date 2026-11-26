@@ -58,6 +58,8 @@ import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.example.mycycle.MainViewModel
 import com.example.mycycle.R
 import com.example.mycycle.UiState
+import com.example.mycycle.data.OnboardingMode
+import com.example.mycycle.ui.onboarding.OnboardingScreen
 import com.example.mycycle.data.BackupInfo
 import com.example.mycycle.data.DayLog
 import com.example.mycycle.data.Prediction
@@ -110,6 +112,18 @@ fun MainScreen(vm: MainViewModel) {
     val state by vm.state.collectAsStateWithLifecycle()
     val info by vm.backupInfo.collectAsStateWithLifecycle()
     var tab by remember { mutableStateOf(0) }
+
+    if (!state.loaded) return
+    if (state.onboarding != OnboardingMode.NONE) {
+        OnboardingScreen(mode = state.onboarding) { name, avatar, lastStart, cycleLen, periodLen ->
+            if (state.onboarding == OnboardingMode.PROFILE_ONLY) {
+                vm.saveProfile(name, avatar)
+            } else {
+                vm.completeOnboarding(name, avatar, lastStart, cycleLen, periodLen)
+            }
+        }
+        return
+    }
 
     Scaffold(
         bottomBar = {

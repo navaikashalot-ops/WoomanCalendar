@@ -8,6 +8,9 @@ import androidx.lifecycle.viewModelScope
 import com.example.mycycle.data.BackupInfo
 import com.example.mycycle.data.Cycle
 import com.example.mycycle.data.DayLog
+import com.example.mycycle.data.OnboardingMode
+import com.example.mycycle.data.Profile
+import com.example.mycycle.data.onboardingMode
 import com.example.mycycle.data.Predictor
 import com.example.mycycle.data.Prediction
 import com.example.mycycle.data.Settings
@@ -24,14 +27,24 @@ data class UiState(
     val settings: Settings = Settings(),
     val prediction: Prediction = Predictor.compute(emptyList(), Settings()),
     val loaded: Boolean = false,
+    val profile: Profile? = null,
+    val onboarding: OnboardingMode = OnboardingMode.NONE,
 )
 
 class MainViewModel(app: Application) : AndroidViewModel(app) {
     private val repo = (app as CycleApp).repo
 
-    val state: StateFlow<UiState> = combine(repo.cycles, repo.logs, repo.settings) { c, l, s ->
+    val state: StateFlow<UiState> = combine(repo.cycles, repo.logs, repo.settings, repo.profile) { c, l, s, p ->
         val st = s ?: Settings()
-        UiState(c, l.associateBy { it.date }, st, Predictor.compute(c, st), true)
+        UiState(
+            cycles = c,
+            logs = l.associateBy { it.date },
+            settings = st,
+            prediction = Predictor.compute(c, st),
+            loaded = true,
+            profile = p,
+            onboarding = onboardingMode(p, c.isNotEmpty() || l.isNotEmpty()),
+        )
     }.stateIn(viewModelScope, SharingStarted.Eagerly, UiState())
 
     val backupInfo: StateFlow<BackupInfo> = repo.backup.info
@@ -84,6 +97,20 @@ class MainViewModel(app: Application) : AndroidViewModel(app) {
         repo.backup.link(uri)
         repo.requestBackup()
         toastText(msg)
+    }
+
+    fun saveProfile(name: String, avatar: String) = viewModelScope.launch {
+        repo.saveProfile(name.trim(), avatar)
+    }
+
+    fun completeOnboarding(
+        name: String,
+        avatar: String,
+        lastStart: LocalDate?,
+        cycleLength: Int,
+        periodLength: Int,
+    ) = viewModelScope.launch {
+        repo.completeOnboarding(name.trim(), avatar, lastStart, cycleLength, periodLength)
     }
 
     fun flushBackup() = repo.flush()

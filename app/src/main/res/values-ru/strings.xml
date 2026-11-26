@@ -83,4 +83,16 @@
     <string name="restore_too_new">Файл создан более новой версией приложения</string>
     <string name="restore_ok">Восстановлено: циклов %1$d, записей %2$d</string>
     <string name="restore_fail">Не удалось прочитать файл: %1$s</string>
+    <string name="ob_hello_title">Давайте познакомимся</string>
+    <string name="ob_hello_sub">Имя и аватарка видны только вам</string>
+    <string name="ob_name">Как к вам обращаться</string>
+    <string name="ob_next">Дальше</string>
+    <string name="ob_cycle_title">Ваш цикл</string>
+    <string name="ob_cycle_sub">Можно пропустить и отметить позже в календаре</string>
+    <string name="ob_last_start">Первый день последних месячных</string>
+    <string name="ob_dont_remember">Не помню</string>
+    <string name="ob_done">Готово</string>
+    <string name="greet_morning">Доброе утро</string>
+    <string name="greet_day">Добрый день</string>
+    <string name="greet_evening">Добрый вечер</string>
 </resources>

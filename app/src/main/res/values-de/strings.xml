@@ -83,4 +83,16 @@
     <string name="restore_too_new">Die Datei stammt von einer neueren App-Version</string>
     <string name="restore_ok">Wiederhergestellt: %1$d Zyklen, %2$d Einträge</string>
     <string name="restore_fail">Datei konnte nicht gelesen werden: %1$s</string>
+    <string name="ob_hello_title">Lass uns kennenlernen</string>
+    <string name="ob_hello_sub">Name und Avatar siehst nur du</string>
+    <string name="ob_name">Wie sollen wir dich nennen</string>
+    <string name="ob_next">Weiter</string>
+    <string name="ob_cycle_title">Dein Zyklus</string>
+    <string name="ob_cycle_sub">Du kannst das überspringen und später im Kalender eintragen</string>
+    <string name="ob_last_start">Erster Tag deiner letzten Periode</string>
+    <string name="ob_dont_remember">Weiß ich nicht</string>
+    <string name="ob_done">Fertig</string>
+    <string name="greet_morning">Guten Morgen</string>
+    <string name="greet_day">Guten Tag</string>
+    <string name="greet_evening">Guten Abend</string>
 </resources>
