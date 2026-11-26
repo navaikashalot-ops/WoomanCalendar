@@ -60,7 +60,6 @@ import com.example.mycycle.data.DayMarks
 import com.example.mycycle.data.Prediction
 import com.example.mycycle.ui.avatarRes
 import com.example.mycycle.ui.greetingRes
-import com.example.mycycle.ui.greetingText
 import com.example.mycycle.ui.iconRes
 import com.example.mycycle.ui.theme.PeonyColors
 import com.example.mycycle.ui.theme.PeonyShapes
@@ -187,7 +186,8 @@ internal fun PeonyCard(modifier: Modifier = Modifier, content: @Composable () ->
 
 @Composable
 private fun Header(state: UiState) {
-    val greeting = greetingText(stringResource(greetingRes(LocalTime.now().hour)), state.profile?.name ?: "")
+    val greeting = stringResource(greetingRes(LocalTime.now().hour))
+    val name = state.profile?.name ?: ""
     Box(Modifier.fillMaxWidth().height(56.dp)) {
         Image(
             painter = painterResource(R.drawable.deco_peony),
@@ -208,12 +208,22 @@ private fun Header(state: UiState) {
                     .background(MaterialTheme.colorScheme.surface),
             )
             Spacer(Modifier.width(12.dp))
-            Text(
-                greeting,
-                fontSize = 20.sp,
-                fontWeight = FontWeight.ExtraBold,
-                color = MaterialTheme.colorScheme.onBackground,
-            )
+            Column {
+                Text(
+                    greeting,
+                    fontSize = 13.sp,
+                    fontWeight = FontWeight.Bold,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                )
+                if (name.isNotBlank()) {
+                    Text(
+                        name.trim(),
+                        fontSize = 20.sp,
+                        fontWeight = FontWeight.ExtraBold,
+                        color = MaterialTheme.colorScheme.onBackground,
+                    )
+                }
+            }
         }
     }
 }
