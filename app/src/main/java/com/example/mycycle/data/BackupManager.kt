@@ -73,6 +73,7 @@ class BackupManager(private val ctx: Context, private val dao: AppDao) {
         settings = dao.getSettings() ?: Settings(),
         cycles = dao.getCycles(),
         dayLogs = dao.getLogs(),
+        profile = dao.getProfile(),
     )
 
     /** Записывает снимок локально и в связанный файл. force=true — даже если данных нет (ручное «сохранить»). */
@@ -120,8 +121,9 @@ class BackupManager(private val ctx: Context, private val dao: AppDao) {
             val text = ctx.contentResolver.openInputStream(uri)?.use { it.readBytes().decodeToString() }
                 ?: return@withContext ctx.getString(R.string.restore_open_fail)
             val snap = json.decodeFromString<Snapshot>(text)
-            if (snap.schemaVersion > 1) return@withContext ctx.getString(R.string.restore_too_new)
+            if (snap.schemaVersion > 2) return@withContext ctx.getString(R.string.restore_too_new)
             dao.replaceAll(snap.cycles, snap.dayLogs, snap.settings)
+            snap.profile?.let { dao.upsertProfile(it.copy(id = 1)) }
             ctx.getString(R.string.restore_ok, snap.cycles.size, snap.dayLogs.size)
         } catch (e: Exception) {
             ctx.getString(R.string.restore_fail, e.message)
@@ -138,8 +140,9 @@ class BackupManager(private val ctx: Context, private val dao: AppDao) {
                 val f = localFile
                 if (!f.exists()) return@withContext
                 val snap = json.decodeFromString<Snapshot>(f.readText())
-                if (snap.schemaVersion > 1) return@withContext
+                if (snap.schemaVersion > 2) return@withContext
                 dao.replaceAll(snap.cycles, snap.dayLogs, snap.settings)
+                snap.profile?.let { dao.upsertProfile(it.copy(id = 1)) }
             } catch (e: Exception) {
                 // повреждённый файл — игнорируем, ничего не затираем
             }

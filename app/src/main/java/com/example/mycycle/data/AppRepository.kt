@@ -17,6 +17,7 @@ class AppRepository(
     val cycles = dao.observeCycles()
     val logs = dao.observeLogs()
     val settings = dao.observeSettings()
+    val profile = dao.observeProfile()
 
     private val trigger = MutableSharedFlow<Unit>(extraBufferCapacity = 1, onBufferOverflow = BufferOverflow.DROP_OLDEST)
 
@@ -68,5 +69,24 @@ class AppRepository(
     suspend fun saveSettings(cycleLength: Int, periodLength: Int) {
         dao.upsertSettings(Settings(1, cycleLength, periodLength, System.currentTimeMillis()))
         requestBackup()
+    }
+
+    suspend fun saveProfile(name: String, avatar: String) {
+        dao.upsertProfile(Profile(1, name, avatar, true, System.currentTimeMillis()))
+        requestBackup()
+    }
+
+    suspend fun completeOnboarding(
+        name: String,
+        avatar: String,
+        lastStart: LocalDate?,
+        cycleLength: Int,
+        periodLength: Int,
+    ) {
+        if (lastStart != null) {
+            startPeriod(lastStart)
+            saveSettings(cycleLength, periodLength)
+        }
+        saveProfile(name, avatar)
     }
 }

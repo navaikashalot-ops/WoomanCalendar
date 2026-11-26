@@ -34,12 +34,23 @@ data class Settings(
     val updatedAt: Long = 0,
 )
 
+@Serializable
+@Entity(tableName = "profile")
+data class Profile(
+    @PrimaryKey val id: Int = 1,
+    val name: String = "",
+    val avatar: String = "bun",
+    val onboarded: Boolean = false,
+    val updatedAt: Long = 0,
+)
+
 /** Полный снимок данных для резервной копии (JSON). */
 @Serializable
 data class Snapshot(
-    val schemaVersion: Int = 1,
+    val schemaVersion: Int = 2,
     val exportedAt: Long = 0,
     val settings: Settings = Settings(),
     val cycles: List<Cycle> = emptyList(),
     val dayLogs: List<DayLog> = emptyList(),
+    val profile: Profile? = null,
 )

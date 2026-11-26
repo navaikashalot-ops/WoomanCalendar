@@ -54,6 +54,15 @@ abstract class AppDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     abstract suspend fun upsertSettings(s: Settings)
 
+    @Query("SELECT * FROM profile WHERE id = 1")
+    abstract fun observeProfile(): Flow<Profile?>
+
+    @Query("SELECT * FROM profile WHERE id = 1")
+    abstract suspend fun getProfile(): Profile?
+
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    abstract suspend fun upsertProfile(p: Profile)
+
     @Transaction
     open suspend fun replaceAll(cycles: List<Cycle>, logs: List<DayLog>, settings: Settings) {
         clearCycles()
