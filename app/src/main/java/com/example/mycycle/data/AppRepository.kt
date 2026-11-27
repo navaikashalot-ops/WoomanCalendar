@@ -23,7 +23,11 @@ class AppRepository(
 
     @OptIn(FlowPreview::class)
     fun start() {
-        scope.launch { backup.autoRestoreLocalIfEmpty() }
+        scope.launch {
+            backup.autoRestoreLocalIfEmpty()
+            // Починка данных, где одно начало месячных отмечено дважды (см. mergeCloseCycles).
+            if (dao.addCycleAndMerge(null)) requestBackup()
+        }
         scope.launch { trigger.debounce(1500).collect { backup.writeAll() } }
     }
 
@@ -37,10 +41,8 @@ class AppRepository(
     }
 
     suspend fun startPeriod(date: LocalDate) {
-        val existing = dao.getCycles()
-        if (existing.none { it.startDate == date.toString() }) {
-            dao.upsertCycle(Cycle(UUID.randomUUID().toString(), date.toString(), null, System.currentTimeMillis()))
-        }
+        // Начало, отмеченное рядом с уже существующим (например, 30-го при отмеченном 1-м), сдвигает тот же цикл.
+        dao.addCycleAndMerge(Cycle(UUID.randomUUID().toString(), date.toString(), null, System.currentTimeMillis()))
         requestBackup()
     }
 

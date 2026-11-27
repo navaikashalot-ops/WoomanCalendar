@@ -106,4 +106,13 @@
     <string name="phase_fertile">Hoy: ventana fértil</string>
     <string name="phase_period">Tienes la regla</string>
     <string name="cd_avatar">Avatar</string>
+    <string name="rem_channel">Recordatorios del ciclo</string>
+    <string name="rem_title">Tu periodo llega pronto</string>
+    <plurals name="rem_text"><item quantity="one">En %1$d día, el %2$s</item><item quantity="many">En %1$d días, el %2$s</item><item quantity="other">En %1$d días, el %2$s</item></plurals>
+    <string name="rem_card_title">Recordatorio</string>
+    <string name="rem_enable">Avisarme antes del periodo</string>
+    <string name="rem_days">Días antes</string>
+    <string name="rem_time">Hora</string>
+    <string name="rem_denied">Las notificaciones están desactivadas para la app. Actívalas en los ajustes del teléfono.</string>
+    <string name="rem_ok">Aceptar</string>
 </resources>

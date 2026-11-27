@@ -106,4 +106,13 @@
     <string name="phase_fertile">Heute fruchtbares Fenster</string>
     <string name="phase_period">Periode läuft</string>
     <string name="cd_avatar">Avatar</string>
+    <string name="rem_channel">Zykluserinnerungen</string>
+    <string name="rem_title">Deine Periode kommt bald</string>
+    <plurals name="rem_text"><item quantity="one">In %1$d Tag, am %2$s</item><item quantity="other">In %1$d Tagen, am %2$s</item></plurals>
+    <string name="rem_card_title">Erinnerung</string>
+    <string name="rem_enable">Vor der Periode erinnern</string>
+    <string name="rem_days">Tage vorher</string>
+    <string name="rem_time">Uhrzeit</string>
+    <string name="rem_denied">Benachrichtigungen sind für die App deaktiviert. Erlaube sie in den Telefoneinstellungen.</string>
+    <string name="rem_ok">OK</string>
 </resources>

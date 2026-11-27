@@ -41,6 +41,7 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.mycycle.MainViewModel
@@ -123,10 +124,11 @@ fun DayDialog(date: LocalDate, log: DayLog?, isCycleStart: Boolean, vm: MainView
                 }
 
                 SectionTitle(R.string.mood_title)
-                Row(horizontalArrangement = Arrangement.spacedBy(14.dp)) {
+                // Равные колонки: расстояние между значками не зависит от длины подписи.
+                Row(Modifier.fillMaxWidth()) {
                     MOOD_OPTIONS.forEach { opt ->
                         val on = mood == opt.key
-                        Column(horizontalAlignment = Alignment.CenterHorizontally) {
+                        Column(Modifier.weight(1f), horizontalAlignment = Alignment.CenterHorizontally) {
                             Image(
                                 painter = painterResource(opt.mark.iconRes()),
                                 contentDescription = stringResource(opt.label),
@@ -147,6 +149,8 @@ fun DayDialog(date: LocalDate, log: DayLog?, isCycleStart: Boolean, vm: MainView
                             Text(
                                 stringResource(opt.label),
                                 fontSize = 11.sp,
+                                textAlign = TextAlign.Center,
+                                modifier = Modifier.padding(top = 4.dp),
                                 color = MaterialTheme.colorScheme.onSurfaceVariant,
                             )
                         }

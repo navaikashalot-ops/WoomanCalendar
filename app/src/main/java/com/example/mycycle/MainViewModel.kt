@@ -13,6 +13,7 @@ import com.example.mycycle.data.Profile
 import com.example.mycycle.data.onboardingMode
 import com.example.mycycle.data.Predictor
 import com.example.mycycle.data.Prediction
+import com.example.mycycle.data.ReminderConfig
 import com.example.mycycle.data.Settings
 import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.StateFlow
@@ -48,6 +49,11 @@ class MainViewModel(app: Application) : AndroidViewModel(app) {
     }.stateIn(viewModelScope, SharingStarted.Eagerly, UiState())
 
     val backupInfo: StateFlow<BackupInfo> = repo.backup.info
+
+    private val reminders = (app as CycleApp).reminders
+    val reminder: StateFlow<ReminderConfig> = reminders.config
+
+    fun updateReminder(cfg: ReminderConfig) = reminders.update(cfg)
 
     private fun toast(textRes: Int) {
         toastText(getApplication<Application>().getString(textRes))

@@ -72,6 +72,18 @@ abstract class AppDao {
         upsertSettings(settings.copy(id = 1))
     }
 
+    /** Добавляет цикл (если передан) и склеивает слишком близкие начала в один цикл. */
+    @Transaction
+    open suspend fun addCycleAndMerge(newCycle: Cycle?): Boolean {
+        val before = getCycles()
+        val all = if (newCycle == null || before.any { it.startDate == newCycle.startDate }) before else before + newCycle
+        val merged = mergeCloseCycles(all)
+        if (merged == before) return false
+        clearCycles()
+        upsertCycles(merged)
+        return true
+    }
+
     @Transaction
     open suspend fun completeOnboarding(cycle: Cycle?, settings: Settings?, profile: Profile) {
         if (cycle != null && getCycles().none { it.startDate == cycle.startDate }) {

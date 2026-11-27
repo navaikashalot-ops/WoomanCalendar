@@ -106,4 +106,13 @@
     <string name="phase_fertile">Сегодня фертильное окно</string>
     <string name="phase_period">Идут месячные</string>
     <string name="cd_avatar">Аватарка</string>
+    <string name="rem_channel">Напоминания о цикле</string>
+    <string name="rem_title">Скоро месячные</string>
+    <plurals name="rem_text"><item quantity="one">Через %1$d день, %2$s</item><item quantity="few">Через %1$d дня, %2$s</item><item quantity="many">Через %1$d дней, %2$s</item><item quantity="other">Через %1$d дня, %2$s</item></plurals>
+    <string name="rem_card_title">Напоминание</string>
+    <string name="rem_enable">Напомнить о месячных заранее</string>
+    <string name="rem_days">За сколько дней</string>
+    <string name="rem_time">Время</string>
+    <string name="rem_denied">Уведомления для приложения выключены. Разрешите их в настройках телефона.</string>
+    <string name="rem_ok">Готово</string>
 </resources>

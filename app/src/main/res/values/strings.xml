@@ -106,4 +106,13 @@
     <string name="phase_fertile">Fertile window today</string>
     <string name="phase_period">Period in progress</string>
     <string name="cd_avatar">Avatar</string>
+    <string name="rem_channel">Cycle reminders</string>
+    <string name="rem_title">Your period is coming soon</string>
+    <plurals name="rem_text"><item quantity="one">In %1$d day, on %2$s</item><item quantity="other">In %1$d days, on %2$s</item></plurals>
+    <string name="rem_card_title">Reminder</string>
+    <string name="rem_enable">Remind me before my period</string>
+    <string name="rem_days">Days before</string>
+    <string name="rem_time">Time</string>
+    <string name="rem_denied">Notifications are turned off for this app. Allow them in the phone settings.</string>
+    <string name="rem_ok">OK</string>
 </resources>

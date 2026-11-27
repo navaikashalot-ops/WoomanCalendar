@@ -384,24 +384,26 @@ private fun RowScope.DayCell(
 
 @Composable
 private fun Legend() {
-    Row(
-        Modifier.fillMaxWidth().padding(horizontal = 4.dp),
-        horizontalArrangement = Arrangement.SpaceBetween,
-    ) {
-        LegendDot(PeonyColors.Period, stringResource(R.string.legend_period))
-        LegendDot(PeonyColors.Forecast, stringResource(R.string.legend_predicted), dashed = true)
-        LegendDot(PeonyColors.Fertile, stringResource(R.string.legend_fertile))
-        LegendDot(PeonyColors.Ovulation, stringResource(R.string.legend_ovulation))
+    // Сетка 2×2: значки каждой колонки стоят на одной вертикали, текст выровнен от значка.
+    Column(Modifier.fillMaxWidth().padding(horizontal = 8.dp), verticalArrangement = Arrangement.spacedBy(6.dp)) {
+        Row(Modifier.fillMaxWidth()) {
+            LegendDot(PeonyColors.Period, stringResource(R.string.legend_period))
+            LegendDot(PeonyColors.Forecast, stringResource(R.string.legend_predicted), dashed = true)
+        }
+        Row(Modifier.fillMaxWidth()) {
+            LegendDot(PeonyColors.Fertile, stringResource(R.string.legend_fertile))
+            LegendDot(PeonyColors.Ovulation, stringResource(R.string.legend_ovulation))
+        }
     }
 }
 
 @Composable
 private fun RowScope.LegendDot(color: Color, text: String, dashed: Boolean = false) {
-    Row(Modifier.weight(1f, fill = false), verticalAlignment = Alignment.CenterVertically) {
-        var m = Modifier.size(10.dp).clip(CircleShape).background(color)
+    Row(Modifier.weight(1f), verticalAlignment = Alignment.CenterVertically) {
+        var m = Modifier.size(12.dp).clip(CircleShape).background(color)
         if (dashed) m = m.border(1.dp, MaterialTheme.colorScheme.primary, CircleShape)
         Box(m)
-        Spacer(Modifier.width(4.dp))
-        Text(text, fontSize = 11.sp, lineHeight = 13.sp, color = MaterialTheme.colorScheme.onSurfaceVariant)
+        Spacer(Modifier.width(8.dp))
+        Text(text, fontSize = 12.sp, lineHeight = 14.sp, color = MaterialTheme.colorScheme.onSurfaceVariant)
     }
 }

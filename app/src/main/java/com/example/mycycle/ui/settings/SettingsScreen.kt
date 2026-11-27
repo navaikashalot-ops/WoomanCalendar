@@ -40,6 +40,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.example.mycycle.MainViewModel
 import com.example.mycycle.R
 import com.example.mycycle.UiState
@@ -69,6 +70,7 @@ class OpenWritableDocument : ActivityResultContract<Unit, Uri?>() {
 
 @Composable
 fun SettingsScreen(state: UiState, info: BackupInfo, vm: MainViewModel) {
+    val reminder by vm.reminder.collectAsStateWithLifecycle()
     var name by remember(state.profile) { mutableStateOf(state.profile?.name ?: "") }
     var avatar by remember(state.profile) { mutableStateOf(state.profile?.avatar ?: AVATAR_KEYS.first()) }
     var cycleLen by remember(state.settings) { mutableStateOf(state.settings.cycleLength) }
@@ -118,6 +120,12 @@ fun SettingsScreen(state: UiState, info: BackupInfo, vm: MainViewModel) {
                 shape = PeonyShapes.Button,
                 modifier = Modifier.fillMaxWidth(),
             ) { Text(stringResource(R.string.set_save), fontWeight = FontWeight.Bold) }
+        }
+
+        SettingsCard(stringResource(R.string.rem_card_title)) {
+            ReminderCard(reminder, vm::updateReminder) { label, value, min, max, onChange ->
+                Stepper(label, value, min, max, onChange)
+            }
         }
 
         SettingsCard(stringResource(R.string.bk_title)) {
